@@ -1,40 +1,63 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Catering Website
 
-## Getting Started
+This is a Next.js based statically generated catering website. It is a project that strives to provide an engaging online catering menu viewing experience for users. 
 
-First, run the development server:
+## Tech Stack
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+-  **Next.js**: Utilized for static site generation.
+-  **Tailwind CSS**: For rapid, utility-first UI development.
+-  **React Spring**: Provides practical animations to make the site more interactive and dynamic.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+If the project grows and requires dynamic features:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+-  **Node.js**: Enables JavaScript on the backend.
+-  **Express.js**: Used for building backend routes and APIs if needed.
+ 
+And the possible database choices are:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+-  **MongoDB**: Non-relational database used for storing data in BSON format.
+-  **Mongoose**: Supports MongoDB providing data modeling.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Hosting
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The project is hosted on:
 
-## Learn More
+-  **Vercel**: The cloud platform designed for static sites and serverless functions.
 
-To learn more about Next.js, take a look at the following resources:
+## Working with Google Sheets as a CMS:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project utilizes Google Sheets as a simple CMS for updating the menu. 
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Version Control:
 
-## Deploy on Vercel
+-  The project uses `git` for version control, and the code is stored on GitHub.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Get started with the project:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Clone the repository:
+    ```bash
+    git clone YOUR_REPO_URL
+    ```
+
+2. Go to the project directory:
+    ```bash
+    cd YOUR_PROJECT_NAME
+    ```
+
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+
+4. Run the development server:
+    ```bash
+    npm run dev
+    ```
+
+5. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Updates:
+
+To update the menu, simply make changes in the connected Google Spreadsheet.
+
+**More details on other aspects of the project will be updated soon.**
