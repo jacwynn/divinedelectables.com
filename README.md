@@ -1,4 +1,4 @@
-# Catering Website
+# Divine Delectables Website
 
 This is a Next.js based statically generated catering website. It is a project that strives to provide an engaging online catering menu viewing experience for users. 
 
@@ -7,6 +7,7 @@ This is a Next.js based statically generated catering website. It is a project t
 -  **Next.js**: Utilized for static site generation.
 -  **Tailwind CSS**: For rapid, utility-first UI development.
 -  **React Spring**: Provides practical animations to make the site more interactive and dynamic.
+-  **React Hook Form**: A form handling library used for forms in the application.
 
 If the project grows and requires dynamic features:
 
@@ -36,12 +37,12 @@ This project utilizes Google Sheets as a simple CMS for updating the menu.
 
 1. Clone the repository:
     ```bash
-    git clone YOUR_REPO_URL
+    git clone git@github.com:jacwynn/divinedelectables.git
     ```
 
 2. Go to the project directory:
     ```bash
-    cd YOUR_PROJECT_NAME
+    cd divinedelectables
     ```
 
 3. Install dependencies:
