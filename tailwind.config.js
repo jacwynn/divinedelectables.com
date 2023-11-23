@@ -16,7 +16,8 @@ module.exports = {
       },
       fontFamily: {
         'serif': ['PT Serif', 'serif'],
-        'seaweed': ['SeaweedScript', 'cursive']
+        'seaweed': ['SeaweedScript', 'cursive'],
+        'berkshire': ['BerkshireSwash', 'serif']
       },
     },
   },
