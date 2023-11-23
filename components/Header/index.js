@@ -9,7 +9,7 @@ export default function Header() {
 
     return (
         <header>
-            <div className='container flex items-center justify-between mx-auto'>
+            <nav className='container flex items-center justify-between mx-auto'>
                 <Logo />
 
                 {/* Desktop Menu */}
@@ -18,7 +18,7 @@ export default function Header() {
                 {/* Only shows on mobile & tablet */}
                 <SearchIcon />
                 <HamburgerMenu openState={{ isOpen, setIsOpen }} />
-            </div>
+            </nav>
             
             {/* Mobile Menu */}
             {isOpen && <MenuItems isMobile />}
