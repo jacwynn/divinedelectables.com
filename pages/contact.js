@@ -1,7 +1,9 @@
+import Layout from "@/components/Layout"
+
 export default function Contact() {
     return (
-        <main>
+        <Layout>
             Contact Page
-        </main>
+        </Layout>
     )
 }

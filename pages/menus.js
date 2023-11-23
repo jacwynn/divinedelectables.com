@@ -1,7 +1,9 @@
+import Layout from "@/components/Layout";
+
 export default function Menus() {
     return (
-        <main>
+        <Layout>
             Menus Page
-        </main>
+        </Layout>
     )
 }

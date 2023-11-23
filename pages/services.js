@@ -1,7 +1,9 @@
+import Layout from "@/components/Layout";
+
 export default function Services() {
     return (
-        <main>
+        <Layout>
             Services Page
-        </main>
+        </Layout>
     )
 }

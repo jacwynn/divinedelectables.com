@@ -1,7 +1,9 @@
+import Layout from "@/components/Layout";
+
 export default function Gallery() {
     return (
-        <main>
+        <Layout>
             Gallery Page
-        </main>
+        </Layout>
     )
 }
