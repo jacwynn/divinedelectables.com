@@ -7,8 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      colors: {
+        'brand-red': '#D9534F',
+        'brand-black': '#333333',
+        'brand-grey': '#717171',
+        'brand-bg-grey': '#FAFAFA',
+        'brand-bg-white': '#FFFFFF'
+      },
       fontFamily: {
-        'serif': ['PT Serif', 'serif']
+        'serif': ['PT Serif', 'serif'],
+        'seaweed': ['SeaweedScript', 'cursive']
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
