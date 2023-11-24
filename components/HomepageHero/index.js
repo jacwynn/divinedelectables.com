@@ -7,6 +7,7 @@ export default function HomepageHero() {
             <div className="flex flex-col items-center justify-between lg:flex-row">
                 <div className="order-2 space-y-6 lg:order-1">
                 <h1 className="font-bold uppercase text-7xl">Satisfying food for soul</h1>
+                {/* eslint-disable-next-line */}
                 <p className="text-4xl font-seaweed tracking-[0.06em]">that's sinfully delicious</p>
                 <p className="max-w-prose text-brand-grey">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostu exercitation ullamco.</p>
                 <Link href="/menus"><button className="p-4 mt-8 text-white uppercase bg-brand-red">View Our Menus</button></Link>
