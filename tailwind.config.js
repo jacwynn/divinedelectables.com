@@ -19,6 +19,9 @@ module.exports = {
         'seaweed': ['SeaweedScript', 'cursive'],
         'berkshire': ['BerkshireSwash', 'serif']
       },
+      backgroundImage: theme => ({
+        'footer-texture': 'url("/images/footer-bg.png")'
+      })
     },
   },
   plugins: [],
