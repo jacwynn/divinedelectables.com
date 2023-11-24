@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+
+// Components
+import Logo from '../Logo';
+import MenuItems from '../MenuItems';
 
 export default function Header() {
 
@@ -26,51 +28,6 @@ export default function Header() {
     )
 }
 
-const MenuItems = ({ isMobile }) => {
-    const router = useRouter();
-    const menuItems = [
-        { name: 'Home', href: '/' },
-        { name: 'About', href: '/about' },
-        { name: 'Services', href: '/services' },
-        { name: 'Menus', href: '/menus' },
-        { name: 'Gallery', href: '/gallery' },
-        { name: 'Contact', href: '/contact' },
-    ];
-
-    return (
-        isMobile ? (
-            <ul className='uppercase lg:hidden'>
-                {menuItems.map(item => (
-                    <li key={item.name} className={`font-bold p-4 text-brand-black text-center tracking-[0.06em]`}>
-                        <Link href={item.href}>{item.name}</Link>
-                    </li>
-                ))}
-            </ul> 
-        ) : (
-            <div className='hidden lg:block'>
-                <ul className='flex space-x-16 uppercase'>
-                    {menuItems.map(item => (
-                        <li key={item.name} className={`font-bold text-brand-black tracking-[0.06em] pb-2 border-b-2 ${router.pathname === item.href ? 'border-brand-red' : 'border-transparent'} hover:border-brand-red`}>
-                            <Link href={item.href}>{item.name}</Link>
-                        </li>
-                    ))}
-                </ul>
-            </div> 
-        )
-    )
-}
-
-const Logo = () => {
-    return (
-        <div>
-            <Link href="/">
-                <Image src="/images/logo.png" alt="Logo" width={124} height={101} />
-                <p className='hidden lg:block font-berkshire mt-[-10px]'>Divine Delectables</p>
-            </Link>
-        </div>
-    )
-}
-
 const HamburgerMenu = ({ openState: { isOpen, setIsOpen } }) => {
     return (
         <div className='lg:hidden'>
@@ -91,7 +48,7 @@ const HamburgerMenu = ({ openState: { isOpen, setIsOpen } }) => {
 
 const SearchIcon = () => {
     return (
-        <div className='hidden lg:block'>
+        <div className='justify-end flex-1 hidden lg:flex'>
             <Image src="/images/search.svg" alt="Search Icon" width={24} height={24} />
         </div>
     )
