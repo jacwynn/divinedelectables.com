@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 // Components
@@ -8,9 +8,28 @@ import MenuItems from '../MenuItems';
 export default function Header() {
 
     const [isOpen, setIsOpen] = useState(false);
+    const [lastScrollPos, setLastScrollPos] = useState(0);
+    const [showMenu, setShowMenu] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.scrollY;
+            const isScrollingUp = lastScrollPos > currentScrollPos;
+
+            setShowMenu(isScrollingUp);
+            setLastScrollPos(currentScrollPos);
+        }
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }
+
+    }, [lastScrollPos])
 
     return (
-        <header>
+        <header className={`w-full z-[100] fixed ${showMenu ? '' : 'hidden'}`}>
             <nav className='container flex items-center justify-between mx-auto'>
                 <Logo />
 
