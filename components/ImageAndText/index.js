@@ -36,7 +36,7 @@ export default function ImageAndText({ image, content }) {
             dangerouslySetInnerHTML={{ __html: heading }}
           ></h2>
         )}
-        <hr class="w-[60px] border-t-[3px] border-brand-red my-4 mt-5"></hr>
+        <hr className="w-[60px] border-t-[3px] border-brand-red my-4 mt-5"></hr>
         {paragraph && <p className="text-brand-grey">{paragraph}</p>}
         {cta && link && (
           <a href={link}>
