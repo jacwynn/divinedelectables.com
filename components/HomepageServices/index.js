@@ -9,9 +9,9 @@ export default function HomepageServices() {
         width={215}
         height={155}
       />
-      <div className="container mt-12 mx-auto bg-brand-bg-grey rounded-[2.5rem] p-4 lg:p-24">
-        <div className="text-center max-w-[70rem] mx-auto mb-24">
-          <h2 className="text-[2.5rem] font-bold uppercase">
+      <div className="container pb-[9rem] w-[90%] lg:w-auto mt-12 mx-auto bg-brand-bg-grey rounded-[2.5rem] p-4 lg:p-24">
+        <div className="text-center max-w-[70rem] mx-auto mb-8 lg:mb-24">
+          <h2 className="text-[1.375rem] lg:text-[2.5rem] font-bold uppercase">
             Take your event to the next level with our full-service catering
             services
           </h2>
@@ -75,7 +75,7 @@ export default function HomepageServices() {
         alt="spaghetti"
         width={620}
         height={500}
-        className="absolute right-0 bottom-[-10rem] w-[300px]"
+        className="absolute right-0 bottom-[-7rem] lg:bottom-[-10rem] w-[250px] lg:w-[300px]"
       />
     </section>
   );
