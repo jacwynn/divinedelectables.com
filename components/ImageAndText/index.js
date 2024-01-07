@@ -1,18 +1,51 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function ImageAndText({ image, content }) {
-  const { url, alt, width, height } = image;
+  const { url, alt, width, mobileWidth, height } = image;
   const { heading, paragraph, cta, link } = content;
+
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const checkMediaQuery = () => {
+      const match = window.matchMedia("(min-width: 1024px)").matches;
+      setIsDesktop(match);
+    };
+
+    checkMediaQuery();
+
+    window.addEventListener("resize", checkMediaQuery);
+    return () => window.removeEventListener("resize", checkMediaQuery);
+  }, []);
+
   return (
     <div className="flex flex-col items-center lg:justify-around lg:flex-row">
-      <Image src={url} alt={alt} width={width} height={height} />
-      <div className="max-w-[540px]">
-        {heading && <h3>{heading}</h3>}
-        {paragraph && <p>{paragraph}</p>}
-        {cta && link && <a href={link}>{cta}</a>}
+      <Image
+        src={url}
+        alt={alt}
+        width={isDesktop ? width : mobileWidth}
+        height={height}
+      />
+      <div className="max-w-[400px] mt-8 lg:mt-0">
+        {heading && (
+          <h2
+            className="text-[1.375rem] lg:text-[2.5rem] font-bold uppercase"
+            dangerouslySetInnerHTML={{ __html: heading }}
+          ></h2>
+        )}
+        <hr class="w-[60px] border-t-[3px] border-brand-red my-4 mt-5"></hr>
+        {paragraph && <p className="text-brand-grey">{paragraph}</p>}
+        {cta && link && (
+          <a href={link}>
+            <button className="p-4 mt-8 text-white uppercase bg-brand-red">
+              {cta}
+            </button>
+          </a>
+        )}
       </div>
     </div>
   );
 }
-
-// TODO: finish styling the image and text component to match the mock (majority of work is on the content side) - 1/1

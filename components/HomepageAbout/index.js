@@ -5,11 +5,13 @@ export default function HomepageAbout() {
     image: {
       url: "/images/homepage-about.png",
       alt: "about",
-      width: "400",
+      width: "500",
+      mobileWidth: "250",
       height: "370",
     },
     content: {
-      heading: "Catering with love and expertise",
+      heading:
+        "Catering with <span class='font-seaweed font-normal lowercase tracking-[3px]'>love</span> and expertise",
       paragraph:
         "Paulette Blanks believes that catering is not just about providing exceptional food but also crafting unforgettable moments. At the heart of it all is Paulette's dedication to personalization, ensuring that every menu, every presentation, and every bite is tailored to your unique taste and preferences.",
       cta: "Read Her Story",
