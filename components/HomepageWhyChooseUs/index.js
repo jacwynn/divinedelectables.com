@@ -49,7 +49,7 @@ const Paragraph = () => {
           eiusmod tempor.
         </li>
       </ul>
-      <p>Let's create the perfect event together.</p>
+      <p>Let&apos;s create the perfect event together.</p>
     </div>
   );
 };
