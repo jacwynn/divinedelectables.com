@@ -11,14 +11,18 @@ export default function ImageAndText({ image, content }) {
 
   useEffect(() => {
     const checkMediaQuery = () => {
-      const match = window.matchMedia("(min-width: 1024px)").matches;
-      setIsDesktop(match);
+      if (typeof window !== "undefined") {
+        const match = window.matchMedia("(min-width: 1024px)").matches;
+        setIsDesktop(match);
+      }
     };
 
     checkMediaQuery();
 
-    window.addEventListener("resize", checkMediaQuery);
-    return () => window.removeEventListener("resize", checkMediaQuery);
+    if (typeof window !== "undefined") {
+      window.addEventListener("resize", checkMediaQuery);
+      return () => window.removeEventListener("resize", checkMediaQuery);
+    }
   }, []);
 
   return (
@@ -37,7 +41,7 @@ export default function ImageAndText({ image, content }) {
           ></h2>
         )}
         <hr className="w-[60px] border-t-[3px] border-brand-red my-4 mt-5"></hr>
-        {paragraph && <p className="text-brand-grey">{paragraph}</p>}
+        {paragraph && <div className="text-brand-grey">{paragraph}</div>}
         {cta && link && (
           <a href={link}>
             <button className="p-4 mt-8 text-white uppercase bg-brand-red">
