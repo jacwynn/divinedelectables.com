@@ -4,6 +4,7 @@ import Layout from "@/components/Layout";
 import HomepageHero from "@/components/HomepageHero";
 import HomepageServices from "@/components/HomepageServices";
 import HomepageAbout from "@/components/HomepageAbout";
+import HomepageMenu from "@/components/HomepageMenu";
 import HomepageWhyChooseUs from "@/components/HomepageWhyChooseUs";
 
 export default function Home() {
@@ -12,6 +13,7 @@ export default function Home() {
       <HomepageHero />
       <HomepageServices />
       <HomepageAbout />
+      <HomepageMenu />
       <HomepageWhyChooseUs />
     </Layout>
   );
