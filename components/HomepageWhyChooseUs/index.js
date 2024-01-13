@@ -1,4 +1,5 @@
 import ImageAndText from "../ImageAndText";
+import Image from "next/image";
 
 export default function HomepageWhyChooseUs() {
   const whyChooseUs = {
@@ -6,7 +7,7 @@ export default function HomepageWhyChooseUs() {
       url: "/images/buffet.jpg",
       alt: "about",
       width: "500",
-      mobileWidth: "250",
+      mobileWidth: "500",
       height: "370",
     },
     content: {
@@ -18,10 +19,17 @@ export default function HomepageWhyChooseUs() {
   };
 
   return (
-    <section className="mt-[5rem]">
-      <div className="container px-4 mx-auto lg:px-0">
+    <section className="mt-[5rem] relative">
+      <div className="container w-[90%] lg:w-auto mx-auto bg-brand-bg-grey rounded-[2.5rem] p-[2.5rem] lg:p-24 lg:px-0">
         <ImageAndText image={whyChooseUs.image} content={whyChooseUs.content} />
       </div>
+      <Image
+        src={"/images/leafs.png"}
+        alt="leaf"
+        width={285}
+        height={230}
+        className="absolute top-[-5%] lg:top-auto lg:left-auto bottom-auto lg:bottom-[-15%] w-[8.125rem] lg:w-auto"
+      />
     </section>
   );
 }
@@ -53,3 +61,5 @@ const Paragraph = () => {
     </div>
   );
 };
+
+// TODO: Put the image inside the container so that I don't have to get magacial with the absolute positioning

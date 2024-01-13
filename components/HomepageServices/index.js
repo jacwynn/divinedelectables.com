@@ -80,3 +80,5 @@ export default function HomepageServices() {
     </section>
   );
 }
+
+// TODO: Put the image inside the container so that I don't have to get magacial with the absolute positioning
