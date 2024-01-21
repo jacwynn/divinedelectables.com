@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 
-export default function ImageAndText({ image, content }) {
+export default function ImageAndText({ image, content, context }) {
   const { url, alt, width, mobileWidth, height } = image;
   const { heading, paragraph, cta, link } = content;
 
@@ -26,14 +26,14 @@ export default function ImageAndText({ image, content }) {
   }, []);
 
   return (
-    <div className="flex flex-col items-center lg:justify-around lg:flex-row">
+    <div className={`flex flex-col items-center ${context?.pageURL === '/about' ? 'lg:gap-[5rem] px-4 lg:px-0' : ''} lg:justify-around lg:flex-row`}>
       <Image
         src={url}
         alt={alt}
         width={isDesktop ? width : mobileWidth}
         height={height}
       />
-      <div className="max-w-[400px] mt-8 lg:mt-0">
+      <div className={`${context?.pageURL === '/about' ? '' : 'max-w-[400px]'} mt-8 lg:mt-0`}>
         {heading && (
           <h2
             className="text-[1.375rem] lg:text-[2.5rem] font-bold uppercase"
