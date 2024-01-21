@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import Layout from "@/components/Layout";
+import ServiceGrid from "@/components/ServiceGrid";
 
 export default function Services() {
     const data = {
@@ -15,6 +16,7 @@ export default function Services() {
     return (
         <Layout>
             <Hero data={data} />
+            <ServiceGrid />
         </Layout>
     )
 }
