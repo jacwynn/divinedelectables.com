@@ -29,7 +29,7 @@ export default function About() {
     },
     pageContext: {
       pageURL: '/about'
-    } //convert using react context api
+    } // TODO: convert using react context api
   };
 
   return (
