@@ -10,7 +10,7 @@ export default function Hero({ data, ...props }) {
         <div className="flex flex-col lg:flex-row pt-[8rem] lg:pt-[12rem] container mx-auto px-[1.5rem]">
           <div className="flex-1">
             <h3 className="text-[2.5rem] font-bold uppercase">{pageTitle}</h3>
-            <hr class="w-[60px] border-t-[3px] border-brand-red my-4 mt-5"></hr>
+            <hr className="w-[60px] border-t-[3px] border-brand-red my-4 mt-5"></hr>
             {content}
             {link && text ? (
               <Link className="mb-[5rem]" href={`${link}`}>
