@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function About() {
 
-  const heroData = {
+  const aboutHeroData = {
     pageTitle: "About",
     subTitle: "Divine Delectables",
     content: "With a passion for crafting unforgettable dining experiences, our team is dedicated to elevating every event. At Divine Delectables, we believe that great food is a conversation starter, and we're here to help you create conversations that linger long after the last bite. Discover the art of catering with us.",
@@ -34,7 +34,7 @@ export default function About() {
 
   return (
     <Layout>
-      <Hero data={heroData} />
+      <Hero data={aboutHeroData} />
       <section className="relative">
         <div className="container mx-auto">
           <Image 
