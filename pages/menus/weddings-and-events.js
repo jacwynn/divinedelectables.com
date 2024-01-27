@@ -42,7 +42,7 @@ const Paragraph = () => {
     return (
         <>
             <p className="text-[1.25rem] mb-[1rem] text-brand-grey">We have created specially designed packages tailored to give your wedding the Divine Delectables special touch.</p>
-            <p className="text-[1.25rem] text-brand-grey">Your event will include: A Selection of Hors D'oeuvres served before dinner, a Cookie Table (Chef's Choice), and a Three course sit down or Elegant Buffet Dinner. We will be happy to customize a menu for you specific needs.</p>
+            <p className="text-[1.25rem] text-brand-grey">Your event will include: A Selection of Hors D&apos;oeuvres served before dinner, a Cookie Table (Chef&apos;s Choice), and a Three course sit down or Elegant Buffet Dinner. We will be happy to customize a menu for you specific needs.</p>
         </>
     )
 }
