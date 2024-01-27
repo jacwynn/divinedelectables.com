@@ -1,6 +1,8 @@
 import Layout from "@/components/Layout";
 import { getMenuData } from '../../lib/sheets';
 import Hero from "@/components/Hero";
+import MenuIntroSection from "@/components/MenuIntroSection";
+import Menu from "@/components/Menu";
 
 const MENU_NAME = "TeaParty";
 
@@ -24,6 +26,8 @@ export default function TeaParty({ menuData }) {
     return (
         <Layout>
             <Hero data={teaPartyData} isMenuPage />
+            <MenuIntroSection data={menuData} />
+            <Menu data={menuData} />
         </Layout>
     )
 }

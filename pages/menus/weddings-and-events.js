@@ -1,10 +1,12 @@
 import Layout from "@/components/Layout";
 import { getMenuData } from '../../lib/sheets';
 import Hero from "@/components/Hero";
+import MenuIntroSection from "@/components/MenuIntroSection";
+import Menu from "@/components/Menu";
 
 const MENU_NAME = "WeddingsAndEvents";
 
-export default function WeddingsAndEvents() {
+export default function WeddingsAndEvents({ menuData }) {
     const weddingAndEventsData = {
         pageTitle: "Weddings & Events",
         content: <Paragraph />,
@@ -24,6 +26,8 @@ export default function WeddingsAndEvents() {
     return (
         <Layout>
             <Hero data={weddingAndEventsData} isMenuPage />
+            <MenuIntroSection data={menuData} />
+            <Menu data={menuData} enableHotAndColdColumns />
         </Layout>
     )
 }
